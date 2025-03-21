@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Jump</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script defer src="./JS/script.js"></script>
+</head>
+<body>
+    <div class="game-board">
+        <img src="./images/montanha2.png" alt="montanha2" class="montanha2">
+        <img src="./images/montanha.png" alt="montanha" class="montanha">
+        <img src="./images/nuvem.png" class="nuvem" alt="nuvem"> 
+        <img src="./images/cano.png" alt="cano" class="cano">
+        <img src="./images/marioyoshi.gif" class="marioyoshi" alt="super-mario-yoshi">
+    </div>
+
+    <div id="jump-count">Pulos sobre o cano: 0</div>
+
+    <div id="game-over-form" style="display: none;">
+        <h2>Game Over!</h2>
+        <p>Digite seu nome para salvar seu recorde:</p>
+        <input type="text" id="player-name" placeholder="Seu nome">
+        <button onclick="saveScore()">Salvar</button>
+    </div>
+    <div id="high-scores"></div>
+
+    <button id="pause-button" onclick="pauseGame()">Pausar</button>
+    <button id="play-button" onclick="playGame()" style="display: none;">Continuar</button>
+</body>
+</html>

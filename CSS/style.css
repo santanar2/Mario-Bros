@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.game-board {
+    width: 100%;
+    height: 900px;
+    border-bottom: 17px solid #6ff721;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.cano{
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+     /* left: 150px;   */
+    animation: cano-animation 1.8s linear infinite;
+}
+
+@keyframes cano-animation { 
+    from {
+        right: -80px;
+    }
+    to{
+     right: 100%;
+    }
+ }
+
+
+.marioyoshi {
+    width: 160px;
+    left: 40px;
+    position: absolute;
+    bottom: 0px;
+   
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% { 
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.nuvem {
+    position: absolute;
+     bottom: 10;
+     width: 500px;
+     height: 50%;
+     animation: cano-animation 10s linear infinite;
+ }
+
+ .montanha {
+    position: absolute;
+    bottom: -0;
+    width: 950px;
+    height: 50%;
+    background-image: url(../img/montanha.png);
+    animation: montanha-animation 10s linear infinite;
+    
+}
+
+@keyframes montanha-animation { 
+    from {
+        right: -80px;
+    }
+    to{
+     right: 100%;
+    }
+    
+}
+
+.montanha2 {
+    position: absolute;
+    bottom: -0;
+    width: 950px;
+    height: 50%;
+    background-image: url(../img/.montanha2.png);
+    animation: montanha-animation 10s linear infinite;
+    
+}
+
+@keyframes montanha2-animation { 
+    from {
+        right: -80px;
+    }
+    to{
+     right: 100%;
+    }
+    
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carrocel {
+    display: flex;
+    grid-auto-flow: column;
+    gap: 1.2rem;
+    overflow-x: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+    border-radius: 40px;      
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#jump-count {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 10; /* Garante que o contador fique na frente */
+}
+
+#high-scores {
+    position: absolute;
+    top: 10px;
+    left:  750px;
+    font-size: 20px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#game-over-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 20;
+}
+
+#pause-button, #play-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#pause-button:hover, #play-button:hover {
+    background-color: #f0f0f0;
+}
