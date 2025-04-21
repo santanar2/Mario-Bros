@@ -1,10 +1,6 @@
 ﻿# Mario-Bros
 
- Este repositório contém  pastas com o seguinte conteúdo: HTML5, CSS, JS, IMAGENS, MIDIA.
-
- Referente  a fazer jogo do mario bros, pulando canos, com record e as 10 melhores record.
-
- Claro! Este repositório, chamado `Mario-Bros`, contém pastas com os seguintes conteúdos:
+-Este repositório, chamado `Mario-Bros`, contém pastas com os seguintes conteúdos:
 
 - **HTML5**: Estrutura do jogo.
 - **CSS**: Estilos e design visual do jogo.
